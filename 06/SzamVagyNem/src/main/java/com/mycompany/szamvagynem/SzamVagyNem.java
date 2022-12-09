@@ -38,11 +38,5 @@ public class SzamVagyNem {
         }
         else
             System.out.println("Az első karakter nem szám!");
-        
-        
-        
-        //Teszt
-        /*System.out.println(karakterLanc);
-        System.out.println(db);*/
     }
 }
