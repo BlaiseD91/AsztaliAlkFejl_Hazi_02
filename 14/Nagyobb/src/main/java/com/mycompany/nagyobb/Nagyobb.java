@@ -16,5 +16,21 @@ public class Nagyobb {
 
     public static void main(String[] args) {
         
+        int felsoHatar = 100000, alsoHatar = 100; //intervallumhatárok
+        int szam = 0; //tároljuk el a megtalált számot
+        
+        //keresőciklus
+        do {
+            System.out.println(felsoHatar);
+            felsoHatar --;
+            if (felsoHatar == 2000){
+                szam = felsoHatar;
+                break;
+            }
+            
+        }while((felsoHatar >= alsoHatar));
+        
+        //A megtalált érték kiírása
+        System.out.println(szam);
     }
 }
