@@ -12,8 +12,20 @@ package com.mycompany.szamvagynem;
  * 
  * Vizsgáljuk meg, hogy egy beolvasott karakterlánc első karaktere szám-e. A maradék karakterekből írjunk ki annyit amennyit az első karakter jelez.
  */
+import java.io.*;
+
 public class SzamVagyNem {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        String karakterLanc;
+        var br = new BufferedReader(new InputStreamReader(System.in));
+        
+        //beolvasás
+        System.out.println("Add meg a karakterláncot:");
+        karakterLanc = br.readLine();
+        
+        
+        //Teszt
+        System.out.println(karakterLanc);
     }
 }
