@@ -19,5 +19,12 @@ public class Csere {
         
         System.out.println("a változó értéke: " + a);
         System.out.println("b változó értéke: " + b);
+        
+        a = a + b; //a = 30
+        b = a - b; // b = 10
+        a = a - b; // a = 20
+        
+        System.out.println("a változó értéke a csere után: " + a);
+        System.out.println("b változó értéke a csere után: " + b);
     }
 }
