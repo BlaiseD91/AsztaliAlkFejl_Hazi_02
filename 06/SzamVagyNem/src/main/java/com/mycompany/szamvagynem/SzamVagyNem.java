@@ -24,8 +24,25 @@ public class SzamVagyNem {
         System.out.println("Add meg a karakterláncot:");
         karakterLanc = br.readLine();
         
+        //számmá konvertálás
+        int db = (int) karakterLanc.charAt(0)-48;
+        
+        //kiíratás
+        if ((db>=0) && (db<=9)) {
+            if (karakterLanc.length()-1>=db){
+                for (int i = 1; i < 1+db; i++)
+                    System.out.print(karakterLanc.charAt(i));
+            }
+            else
+                System.out.println("A karakterláncod hossza kisebb, mint az elején lévő szám!");
+        }
+        else
+            System.out.println("Az első karakter nem szám!");
+        
+        
         
         //Teszt
-        System.out.println(karakterLanc);
+        /*System.out.println(karakterLanc);
+        System.out.println(db);*/
     }
 }
