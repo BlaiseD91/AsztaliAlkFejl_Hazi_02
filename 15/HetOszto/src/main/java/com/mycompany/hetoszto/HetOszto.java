@@ -39,7 +39,7 @@ public class HetOszto {
         
         System.out.println("A talált számok a következők:");
         
-        for (int i = 9; i < talalatokTomb.length; i++) {
+        for (int i = 10; i < talalatokTomb.length; i++) {
             System.out.println(talalatokTomb[i]);   
         }
         
