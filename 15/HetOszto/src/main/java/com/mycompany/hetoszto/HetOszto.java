@@ -15,6 +15,33 @@ package com.mycompany.hetoszto;
 public class HetOszto {
 
     public static void main(String[] args) {
+        int minimum = 100;
+ 
+        int[] talalatokTomb = new int[20];
+        int talalatok = 0;
+        
+        do {
+            int oszto = minimum / 2;
+            int oszthato = 0;
+            do {
+                if (minimum % oszto == 0)
+                    oszthato++;
+                oszto--;
+            }while(oszto > 1);
+            if (oszthato == 7){
+                talalatokTomb[talalatok] = minimum;
+                talalatok++;
+            }
+            minimum++;
+        }while(talalatok != 20);
+        
+        System.out.println("A talált számok a következők:");
+        
+        for (int i = 9; i < talalatokTomb.length; i++) {
+            System.out.println(talalatokTomb[i]);
+            
+        }
+        
         
     }
 }
