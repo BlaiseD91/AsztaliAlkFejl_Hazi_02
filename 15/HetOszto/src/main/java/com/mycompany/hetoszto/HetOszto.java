@@ -26,6 +26,8 @@ public class HetOszto {
             do {
                 if (minimum % oszto == 0)
                     oszthato++;
+                if (oszthato == 8)
+                    break;
                 oszto--;
             }while(oszto > 1);
             if (oszthato == 7){
@@ -38,8 +40,7 @@ public class HetOszto {
         System.out.println("A talált számok a következők:");
         
         for (int i = 9; i < talalatokTomb.length; i++) {
-            System.out.println(talalatokTomb[i]);
-            
+            System.out.println(talalatokTomb[i]);   
         }
         
         
