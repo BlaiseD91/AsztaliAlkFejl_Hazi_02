@@ -17,20 +17,37 @@ public class Nagyobb {
     public static void main(String[] args) {
         
         int felsoHatar = 100000, alsoHatar = 100; //intervallumhatárok
-        int szam = 0; //tároljuk el a megtalált számot
+        int szam; //tároljuk el a megtalált számot
+        String tesztStr;
+        int osszeg;
+        int utolsoSzamjegy, egeszresz;
+        int kitevo;
+        
         
         //keresőciklus
         do {
-            System.out.println(felsoHatar);
-            felsoHatar --;
-            if (felsoHatar == 2000){
-                szam = felsoHatar;
-                break;
-            }
+            osszeg = 0;
+            tesztStr = Integer.toString(felsoHatar);
+            utolsoSzamjegy = (int) (tesztStr.charAt(tesztStr.length()-1)-48);
+            kitevo = tesztStr.length()-1;
+            szam = felsoHatar;
+            do {
+                egeszresz = szam / ((int)Math.pow(10.0, kitevo));
+                kitevo--;
+                szam = szam % ((int)Math.pow(10.0, kitevo+1));
+                osszeg = osszeg + egeszresz;
+            }while (szam > 9 || kitevo != 0);
             
+            if(osszeg < utolsoSzamjegy)
+                break;
+            
+            felsoHatar --;   
         }while((felsoHatar >= alsoHatar));
         
         //A megtalált érték kiírása
-        System.out.println(szam);
+        System.out.println(felsoHatar);
+        
+        
+        
     }
 }
