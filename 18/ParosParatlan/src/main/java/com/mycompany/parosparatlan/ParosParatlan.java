@@ -12,9 +12,19 @@ package com.mycompany.parosparatlan;
  * 
  * Írjunk függvényt, amely igaz értéked ad vissza, ha a paraméterként megadott szám páratlan, egyéb esetben hamis értéket!
  */
+
+
 public class ParosParatlan {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        int szam;
+        
+    }
+    
+    public static boolean paratlan(int szam){
+        if (szam % 2 == 1)
+            return true;
+        else
+            return false;
     }
 }
