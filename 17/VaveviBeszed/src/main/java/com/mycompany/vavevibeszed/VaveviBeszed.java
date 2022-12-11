@@ -14,9 +14,33 @@ package com.mycompany.vavevibeszed;
  *   a -> ava, e -> eve, i -> ivi, o -> ovo, u -> uvu
  *   Például: Ma szep idonk van. Visszaírja: Mava szevep ividovo vavan.
  */
+import java.io.*;
+
 public class VaveviBeszed {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        String szoveg; //eltároljuk a megadott szöveget
+        String[][] atalakitas = {
+            {"a", "ava"},
+            {"e", "eve"},
+            {"i", "ivi"},
+            {"o", "ovo"},
+            {"u", "uvu"}
+        };//átalakítandó betűk és hogy mire alakítsuk át
         
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        //Bekérés
+        System.out.println("Add meg az ékezetmentes szöveget, amit át szeretnél alakítani:");
+        szoveg = br.readLine();
+        
+        // átalakítás
+        for (int i = 0; i < atalakitas.length; i++) {
+            szoveg = szoveg.replaceAll(atalakitas[i][0], atalakitas[i][1]);            
+        }
+
+        //Kiíratás
+        System.out.println(szoveg);
+
     }
 }
